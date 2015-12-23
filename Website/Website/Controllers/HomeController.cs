@@ -26,5 +26,15 @@ namespace Website.Controllers
 
             return View();
         }
+
+        public ActionResult News()
+        {
+            return View();
+        }
+
+        public ActionResult Project()
+        {
+            return View();
+        }
     }
 }
