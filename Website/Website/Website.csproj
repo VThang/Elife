@@ -52,6 +52,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -175,8 +177,44 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Admin.cs">
+      <DependentUpon>WebsiteDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Author.cs">
+      <DependentUpon>WebsiteDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CategoryNew.cs">
+      <DependentUpon>WebsiteDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CategoryProject.cs">
+      <DependentUpon>WebsiteDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Config.cs">
+      <DependentUpon>WebsiteDatabase.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\News.cs">
+      <DependentUpon>WebsiteDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Project.cs">
+      <DependentUpon>WebsiteDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WebsiteDatabase.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebsiteDatabase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WebsiteDatabase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebsiteDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WebsiteDatabase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebsiteDatabase.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -337,6 +375,16 @@
     <Content Include="images\paging-inactive.png" />
     <Content Include="images\prev%402x.png" />
     <Content Include="images\prev.png" />
+    <Content Include="Models\WebsiteDatabase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WebsiteDatabase.edmx</DependentUpon>
+      <LastGenOutput>WebsiteDatabase.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\WebsiteDatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WebsiteDatabase.edmx</DependentUpon>
+      <LastGenOutput>WebsiteDatabase.cs</LastGenOutput>
+    </Content>
     <Content Include="plugins\bootstrap-slider\bootstrap-slider.js" />
     <Content Include="plugins\bootstrap-slider\slider.css" />
     <Content Include="plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.js" />
@@ -1114,6 +1162,13 @@
     <Content Include="plugins\datatables\extensions\TableTools\Readme.md" />
     <Content Include="plugins\input-mask\phone-codes\phone-be.json" />
     <Content Include="plugins\input-mask\phone-codes\phone-codes.json" />
+    <EntityDeploy Include="Models\WebsiteDatabase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>WebsiteDatabase.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\WebsiteDatabase.edmx.diagram">
+      <DependentUpon>WebsiteDatabase.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -1169,7 +1224,9 @@
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
