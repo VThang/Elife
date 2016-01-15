@@ -29,5 +29,7 @@ namespace Website.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Website.Models.Config> Configs { get; set; }
     }
 }

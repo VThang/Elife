@@ -9,6 +9,8 @@ namespace Website.Controllers
 {
     public class HomeController : Controller
     {
+        DatabaseEntities DB = new DatabaseEntities();
+
         public ActionResult Index()
         {
             return View();

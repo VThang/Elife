@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b6dc56ecd0414c259fc2ca170b265898" Name="Diagram1">
+        <EntityTypeShape EntityType="DatabaseModel.Admin" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Author" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.CategoryNew" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.CategoryProject" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Config" Width="1.5" PointX="2.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.News" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Project" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="DatabaseModel.FK__News__AuthorID__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Project__AuthorI__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__News__CategoryNe__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Project__Categor__403A8C7D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
